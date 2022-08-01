@@ -1,0 +1,23 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+   <bean id="std" class="com.prowings.StudentSetterContext">
+   <property name="id" value="10"/>
+   <property name="name" value="Soniya"/>
+   </bean>
+   <bean id="emp" class="com.prowings.Employee">
+   <constructor-arg value="20" type="int"/>
+   <constructor-arg value="Balkrushna" type="String"/>
+   <constructor-arg ref="add"/>
+   </bean>
+   <bean id="add" class="com.prowings.Address">
+   <constructor-arg value="12345" type="int"/>
+   <constructor-arg value="Pune" type="String"/>
+   </bean>
+   <bean id="s" class="com.prowings.Student_Proto_Scop" scope="prototype">
+   <property name="name" value="Ram"/>
+   <property name="id" value="10"/>
+   </bean>
+   </beans>
